@@ -207,7 +207,7 @@ fn main() {
         readstring = readstring.trim().to_string();
         match readstring.parse::<i32>() {
             Ok(i) => {
-                if i >= 0 && i < files.len() as i32 {
+                if i > 0 && i <= files.len() as i32 {
                     for _ in 0..ah.generation_count {
                         println!("{}", files[i as usize - 1usize].get_ranamed(ah.depth));
                     }
